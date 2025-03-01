@@ -1,0 +1,127 @@
+#box{
+    >ul{
+        >li{
+            transition: .4s;
+            &:hover{
+                background-color: rgb(211, 201, 201);
+                color: rgba(0, 0, 0, 0.307);
+            }
+        }
+    }
+}
+
+.pic{
+    background-image: url(../img/Surface-Family-1280x640.webp);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    object-fit: cover;
+}
+
+.myfoot{
+    width: 170px;
+    height: 170px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+
+    &:hover{
+        >img,&::before{
+            animation-play-state: paused;
+        }
+        >figcaption{
+            bottom: -15px;
+            opacity: 1;
+        }
+        >a{
+            right: 90%;opacity: 1;
+        }
+    }
+
+    &::before{
+        content: '';
+        display: flex;
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        top: 20px;
+        left: 25px;
+        background-color: rgba(107, 107, 246, 0.674);
+        animation: foot1 linear infinite alternate 6s;
+        z-index: -10;
+
+    }
+
+    >img{
+        width: 125px;
+        height: 125px;
+        border-radius: 50px;
+        object-fit: cover;
+        animation: foot2 linear infinite alternate 6s;
+        position: absolute;
+        top: 28px;
+        right: 10px;
+    }
+
+    >a{
+        
+        position: absolute;
+        right:100px ;
+        z-index: -9;
+        right: 50%;
+        font-size: 30px;
+        color: rgb(110, 110, 237);
+        transition: .4s;
+        opacity: 0;
+
+        &:nth-of-type(1){
+            top: 0;
+            font-size: 28px;
+        }
+        &:nth-of-type(2){
+            top: 28%;
+            font-size: 28px;
+            transition-delay: .1s;
+        }
+        &:nth-of-type(3){
+            top: 56%;
+            font-size: 31px;
+            transition-delay: .2s;
+        }
+        &:nth-of-type(4){
+            top: 84%;
+            font-size: 22px;
+            transition-delay: .3s;
+            
+        }
+    }
+
+    >figcaption{
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        color:rgb(123, 123, 255);
+        text-transform: capitalize;
+        bottom: 20px;
+        right:-20px;
+        z-index: -20;
+        transition: .4s;
+        font-weight: bold;
+        transition-delay: .2s;
+        opacity: 0;
+    }
+}
+@keyframes foot1{
+    0%{border-radius:37% 63% 41% 59% / 56% 34% 66% 44% ;}
+    50%{border-radius:64% 36% 63% 37% / 37% 59% 41% 63%  ;}
+    100%{border-radius:30% 70% 51% 49% / 62% 41% 59% 38%   ;}
+  }
+  @keyframes foot2{
+    0%{border-radius:30% 70% 51% 49% / 62% 41% 59% 38%  ;}
+    50%{border-radius:37% 63% 41% 59% / 56% 34% 66% 44%  ;}
+    100%{border-radius:64% 36% 63% 37% / 37% 59% 41% 63%   ;}
+  }
+
