@@ -1,5 +1,7 @@
 # Microsoft
 
+## A small UI project about Surface — built with Bootstrap for quick, clean styling
+
 -[Demo Project](https://ghazalehnezamghadiri.github.io/Microsoft/) 
 
 -Developed by Ghazaleh Nezamghadiri
